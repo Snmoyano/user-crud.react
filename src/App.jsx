@@ -64,7 +64,7 @@ function App() {
   return (
     <div className="App">
       <div className="create__user">
-        <h1>👩USERs CRUD🧑</h1>
+        <h1>USERs CRUD</h1>
         <button className="btn__create" onClick={handleModal}>
           <TiUserAdd className="btn__create-icon" />
         </button>
