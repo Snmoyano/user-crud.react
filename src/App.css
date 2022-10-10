@@ -1,0 +1,94 @@
+.App {
+  display: grid;
+  gap: 2em;
+}
+.create__user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btn__create-icon {
+  font-size: 40px;
+}
+.users-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.user__form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.btn__create {
+  background-color: #f26250;
+  width: 150px;
+  height: 50px;
+  margin: 5px;
+  place-items: center;
+  border-radius: 5px;
+}
+.btn__create:hover {
+  border: 3px solid #ce2f2f;
+  transition: 0.5s transform;
+  transform: scale(1.1);
+  background-color: #ce2f2f;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal--show {
+  opacity: 1;
+  pointer-events: unset;
+}
+.modal--hide {
+  opacity: 0;
+}
+.modal__container {
+  width: 90%;
+  max-width: 600px;
+  max-height: 90%;
+  background-color: #fff;
+  border: 1px solid #f26250;
+  backdrop-filter: blur (2px);
+  margin: auto;
+  border-radius: 6px;
+  padding: 3em 2.5em;
+  display: grid;
+  gap: 1em;
+  place-items: center;
+  grid-auto-columns: 100%;
+  position: relative;
+  box-shadow: inset -1px 3px 8px 5px #ccc9, 2px 5px 16px 0px #000000;
+}
+.modal__close {
+  text-decoration: none;
+  color: #fff;
+  background-color: #f26250;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 300;
+  transition: background-color 0.3s;
+  width: 50px;
+  aspect-ratio: 1;
+}
+.modal__close:hover {
+  color: #f26250;
+  background-color: #fff;
+}

@@ -1,0 +1,68 @@
+.form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.container__title {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.container__inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn__form {
+  height: 30px;
+}
+
+.container__inputs {
+  font-size: 20px;
+
+  width: 100%;
+  font-weight: 600;
+}
+.btn__form {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #ce2f2f;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s transform;
+  font-weight: 900;
+}
+.btn__form:hover {
+  border: 3px solid #ce2f2f;
+  transform: scale(1.1);
+  background-color: #ce2f2f;
+  width: 100%;
+  transition: 0.5s transform;
+}
+input {
+  transition: 0.5s transform;
+  border: 1px solid #ce2f2f;
+
+  width: 100%;
+  border-radius: 5px;
+  height: 30px;
+  text-align: center;
+  transition: 0.5s transform;
+}
+
+input:hover {
+  border: 3px solid #ce2f2f;
+  transition: 0.5s transform;
+  transform: scale(1.1);
+  background-color: #ce2f2f;
+  width: 100%;
+}
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
