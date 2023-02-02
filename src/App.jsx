@@ -1,65 +1,65 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import "./App.css";
-import FormUsers from "./components/FormUsers";
-import UserCard from "./components/UserCard";
-const baseURL = "https://users-crud1.herokuapp.com";
-import { TiUserAdd } from "react-icons/ti";
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+import './App.css'
+import FormUsers from './components/FormUsers'
+import UserCard from './components/UserCard'
+const baseURL = 'https://users-crud.academlo.tech'
+import { TiUserAdd } from 'react-icons/ti'
 
 function App() {
-  const [users, setUsers] = useState();
-  const [updateUser, setUpdateUser] = useState();
-  const [modal, setModal] = useState(true);
+  const [users, setUsers] = useState()
+  const [updateUser, setUpdateUser] = useState()
+  const [modal, setModal] = useState(true)
 
   useEffect(() => {
-    getAllUsers();
-  }, []);
+    getAllUsers()
+  }, [])
 
   const getAllUsers = () => {
-    const URL = `${baseURL}/users/`;
+    const URL = `${baseURL}/users/`
     axios
       .get(URL)
       .then((res) => setUsers(res.data))
-      .catch((err) => console.log(err));
-  };
+      .catch((err) => console.log(err))
+  }
 
   const createNewUser = (data) => {
-    const url = `${baseURL}/users/`;
+    const url = `${baseURL}/users/`
     axios
       .post(url, data)
       .then((res) => {
-        console.log(res.data);
-        getAllUsers();
+        console.log(res.data)
+        getAllUsers()
       })
-      .catch((err) => console.log(err));
-  };
+      .catch((err) => console.log(err))
+  }
 
   const deleteUserById = (id) => {
-    const URL = `${baseURL}/users/${id}/`;
+    const URL = `${baseURL}/users/${id}/`
     axios
       .delete(URL)
       .then((res) => {
-        console.log(res.data);
-        getAllUsers();
+        console.log(res.data)
+        getAllUsers()
       })
-      .catch((err) => console.log(err));
-  };
+      .catch((err) => console.log(err))
+  }
 
   const updateUserById = (id, data) => {
-    const URL = `${baseURL}/users/${id}/`;
+    const URL = `${baseURL}/users/${id}/`
     axios
       .patch(URL, data)
       .then((res) => {
-        console.log(res.data);
-        getAllUsers();
+        console.log(res.data)
+        getAllUsers()
       })
-      .catch((err) => console.log(err));
-  };
+      .catch((err) => console.log(err))
+  }
 
   const handleModal = () => {
-    setModal(!modal);
-    console.log(modal);
-  };
+    setModal(!modal)
+    console.log(modal)
+  }
 
   return (
     <div className="App">
@@ -70,7 +70,7 @@ function App() {
         </button>
       </div>
 
-      <section className={`modal ${modal ? "modal--show" : "modal--hide"}`}>
+      <section className={`modal ${modal ? 'modal--show' : 'modal--hide'}`}>
         <div className="modal__container">
           <FormUsers
             createNewUser={createNewUser}
@@ -94,7 +94,7 @@ function App() {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
